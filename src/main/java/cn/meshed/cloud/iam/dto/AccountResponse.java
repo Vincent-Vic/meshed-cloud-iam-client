@@ -2,6 +2,7 @@ package cn.meshed.cloud.iam.dto;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
@@ -11,7 +12,7 @@ import java.time.LocalDateTime;
  * @version 1.0
  */
 @Data
-public class AccountResponse {
+public class AccountResponse implements Serializable {
 
     /**
      * ID

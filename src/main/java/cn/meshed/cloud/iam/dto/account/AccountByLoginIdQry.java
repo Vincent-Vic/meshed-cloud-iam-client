@@ -1,9 +1,9 @@
-package cn.meshed.cloud.iam.dto;
+package cn.meshed.cloud.iam.dto.account;
 
+import com.alibaba.cola.dto.Command;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
-import java.io.Serializable;
 
 /**
  * <h1></h1>
@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @version 1.0
  */
 @Data
-public class AccountByLoginIdRequest implements Serializable {
+public class AccountByLoginIdQry extends Command {
 
     @NotBlank(message = "登入ID不能为空")
     private String loginId;

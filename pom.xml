@@ -24,6 +24,7 @@
     <properties>
         <cola-component-dto.version>4.3.1</cola-component-dto.version>
         <validation-api.version>2.0.1.Final</validation-api.version>
+        <meshed-cloud-constant-starter.version>1.0.0-SNAPSHOT</meshed-cloud-constant-starter.version>
     </properties>
 
     <dependencies>
@@ -42,6 +43,11 @@
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>cn.meshed.base</groupId>
+            <artifactId>meshed-cloud-constant-starter</artifactId>
+            <version>${meshed-cloud-constant-starter.version}</version>
         </dependency>
     </dependencies>
 </project>

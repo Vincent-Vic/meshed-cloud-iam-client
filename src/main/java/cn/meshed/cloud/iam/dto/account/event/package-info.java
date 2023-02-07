@@ -4,4 +4,4 @@
  * @version 1.0
  * @author Vincent Vic
  */
-package cn.meshed.cloud.iam.dto.event;
+package cn.meshed.cloud.iam.dto.account.event;

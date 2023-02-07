@@ -1,9 +1,11 @@
-package cn.meshed.cloud.iam.dto;
+package cn.meshed.cloud.iam.dto.account.data;
 
+import com.alibaba.cola.dto.DTO;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 /**
  * <h1></h1>
@@ -12,7 +14,7 @@ import java.time.LocalDateTime;
  * @version 1.0
  */
 @Data
-public class AccountResponse implements Serializable {
+public class AccountDTO extends DTO {
 
     /**
      * ID
@@ -58,6 +60,11 @@ public class AccountResponse implements Serializable {
      * 是否锁定
      */
     private Boolean locked;
+
+    /**
+     * 权限集合
+     */
+    private Set<String> grantedAuthority;
 
     /**
      * 创建人

@@ -47,11 +47,6 @@ public class AccountDTO extends DTO {
     private Boolean validEmail;
 
     /**
-     * 账号加密后的密码
-     */
-    private String secretKey;
-
-    /**
      * 是否过期
      */
     private Boolean expired;

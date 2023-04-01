@@ -1,9 +1,10 @@
 package cn.meshed.cloud.iam.account;
 
-import cn.meshed.cloud.iam.account.query.AccountByLoginIdQry;
-import cn.meshed.cloud.iam.account.query.GrantedAuthorityQry;
 import cn.meshed.cloud.iam.account.data.AccountDTO;
 import cn.meshed.cloud.iam.account.data.GrantedAuthorityDTO;
+import cn.meshed.cloud.iam.account.query.AccountByLoginIdQry;
+import cn.meshed.cloud.iam.account.query.GrantedAuthorityQry;
+import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.SingleResponse;
 
 import java.util.Set;
@@ -29,5 +30,5 @@ public interface AccountServiceRpc {
      * @param grantedAuthorityQry 请求对象
      * @return 权限字符集
      */
-    SingleResponse<Set<GrantedAuthorityDTO>> getGrantedAuthority(GrantedAuthorityQry grantedAuthorityQry);
+    MultiResponse<GrantedAuthorityDTO> getGrantedAuthority(GrantedAuthorityQry grantedAuthorityQry);
 }

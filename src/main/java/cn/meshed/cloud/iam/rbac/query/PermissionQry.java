@@ -24,10 +24,10 @@ public class PermissionQry extends PageQuery {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 父权限
+     * 归属系统编码
      */
-    @Schema(description = "父权限")
-    private Long parentId;
+    @Schema(description = "归属系统编码")
+    private Long systemId;
 
     /**
      * 关键字
@@ -40,11 +40,5 @@ public class PermissionQry extends PageQuery {
      */
     @Schema(description = "状态")
     private Status status;
-
-    /**
-     * 模式限定
-     */
-    @Schema(description = "模式限定")
-    private List<Long> accessMode;
 
 }

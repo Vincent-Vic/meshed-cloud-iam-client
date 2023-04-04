@@ -40,15 +40,9 @@ public class PermissionOptionDTO implements Serializable {
     private String name;
 
     /**
-     * 权限英文名称
+     * 权限授权标识
      */
-    @Schema(description = "英文名称")
-    private String enname;
-
-    /**
-     * 权限标识
-     */
-    @Schema(description = "权限标识")
+    @Schema(description = "权限授权标识")
     private String access;
 
 }

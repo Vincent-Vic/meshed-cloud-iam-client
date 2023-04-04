@@ -35,7 +35,7 @@ public interface PermissionAdapter {
      */
     @Operation(summary = "分页列表")
     @GetMapping("list")
-    MultiResponse<PermissionDTO> list(PermissionQry pageQry);
+    MultiResponse<PermissionDTO> list(@Valid PermissionQry pageQry);
 
     /**
      * 权限选项
@@ -45,7 +45,7 @@ public interface PermissionAdapter {
      */
     @Operation(summary = "选项")
     @GetMapping("select")
-    MultiResponse<PermissionOptionDTO> select(PermissionBySelectQry permissionBySelectQry);
+    MultiResponse<PermissionOptionDTO> select(@Valid PermissionBySelectQry permissionBySelectQry);
 
     /**
      * 权限详情

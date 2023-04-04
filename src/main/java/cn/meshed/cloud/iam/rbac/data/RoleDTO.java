@@ -43,16 +43,10 @@ public class RoleDTO implements Serializable {
     private String name;
 
     /**
-     * 角色英文名称
+     * 角色授权标识
      */
-    @Schema(description = "英文名称")
-    private String enname;
-
-    /**
-     * 权限标识
-     */
-    @Schema(description = "权限标识")
-    private List<Long> access;
+    @Schema(description = "角色授权标识")
+    private String access;
 
     /**
      * 状态

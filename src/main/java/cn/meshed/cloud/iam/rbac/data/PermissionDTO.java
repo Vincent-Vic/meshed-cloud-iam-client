@@ -1,12 +1,12 @@
 package cn.meshed.cloud.iam.rbac.data;
 
 import cn.meshed.cloud.constant.Status;
+import cn.meshed.cloud.iam.rbac.enums.AccessModeEnum;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -42,10 +42,10 @@ public class PermissionDTO implements Serializable {
     private String name;
 
     /**
-     * 权限英文名称
+     * 权限所属系统
      */
-    @Schema(description = "英文名称")
-    private String enname;
+    @Schema(description = "权限所属系统")
+    private Integer ownerId;
 
     /**
      * 授权路径
@@ -54,10 +54,16 @@ public class PermissionDTO implements Serializable {
     private String uri;
 
     /**
-     * 权限标识
+     * 权限授权标识
      */
-    @Schema(description = "权限标识")
+    @Schema(description = "权限授权标识")
     private String access;
+
+    /**
+     * 授权模式
+     */
+    @Schema(description = "授权模式")
+    private AccessModeEnum accessMode;
 
     /**
      * 状态

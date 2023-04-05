@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
 
@@ -24,6 +25,7 @@ import javax.validation.Valid;
  * @author Vincent Vic
  * @version 1.0
  */
+@RequestMapping("role")
 public interface RoleAdapter {
 
     /**
@@ -34,7 +36,7 @@ public interface RoleAdapter {
      */
     @Operation(summary = "分页列表")
     @GetMapping("list")
-    MultiResponse<RoleDTO> list(RoleQry pageQry);
+    MultiResponse<RoleDTO> list(@Valid RoleQry pageQry);
 
     /**
      * 角色详情
@@ -54,7 +56,7 @@ public interface RoleAdapter {
      */
     @Operation(summary = "选项")
     @GetMapping("select")
-    MultiResponse<RoleOptionDTO> select(@Valid @RequestBody RoleBySelectQry roleBySelectQry);
+    MultiResponse<RoleOptionDTO> select(@Valid RoleBySelectQry roleBySelectQry);
 
     /**
      * 角色保存

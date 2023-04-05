@@ -1,6 +1,5 @@
 package cn.meshed.cloud.iam.account.command;
 
-import cn.meshed.cloud.constant.Status;
 import com.alibaba.cola.dto.Command;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -42,6 +41,12 @@ public class AccountAddCmd extends Command {
     private String loginId;
 
     /**
+     * 账号名称
+     */
+    @NotBlank(message = "账号名称不能为空")
+    @Schema(description = "账号名称")
+    private String realName;
+    /**
      * 账号手机号
      */
     @Schema(description = "账号手机号")
@@ -59,12 +64,6 @@ public class AccountAddCmd extends Command {
     @NotBlank(message = "密码不能为空")
     @Schema(description = "账号加密后的密码")
     private String secretKey;
-
-    /**
-     * 状态
-     */
-    @Schema(description = "状态")
-    private Status status;
 
 
 }

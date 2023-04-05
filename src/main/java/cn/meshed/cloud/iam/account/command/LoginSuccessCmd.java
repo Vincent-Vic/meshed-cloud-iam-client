@@ -28,6 +28,11 @@ public class LoginSuccessCmd extends Command {
     @NotBlank(message = "登入账户名不能为空")
     private String loginId;
     /**
+     * 账号名称
+     */
+    @Schema(description = "账号名称")
+    private String realName;
+    /**
      * 手机号
      */
     @Schema(description = "手机号")

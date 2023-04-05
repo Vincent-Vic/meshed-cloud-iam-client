@@ -41,10 +41,10 @@ public class RoleOptionDTO implements Serializable {
     private String name;
 
     /**
-     * 角色英文名称
+     * 角色标识
      */
-    @Schema(description = "英文名称")
-    private String enname;
+    @Schema(description = "角色标识")
+    private String key;
 
     /**
      * 权限列表

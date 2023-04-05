@@ -22,10 +22,10 @@ public class RoleQry extends PageQuery {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 父权限
+     * 归属系统编码
      */
-    @Schema(description = "父权限")
-    private Long parentId;
+    @Schema(description = "归属系统编码")
+    private Long systemId;
 
     /**
      * 关键字

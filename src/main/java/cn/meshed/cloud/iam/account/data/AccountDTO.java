@@ -1,5 +1,6 @@
 package cn.meshed.cloud.iam.account.data;
 
+import cn.meshed.cloud.iam.account.enums.AccountStatusEnum;
 import com.alibaba.cola.dto.DTO;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
@@ -22,37 +23,42 @@ public class AccountDTO extends DTO {
     /**
      * ID
      */
-    @Schema(description = "")
+    @Schema(description = "ID")
     private Long id;
 
     /**
+     * 账号名称
+     */
+    @Schema(description = "账号名称")
+    private String realName;
+    /**
      * 账号登入主名称
      */
-    @Schema(description = "")
+    @Schema(description = "账号登入主名称")
     private String loginId;
 
     /**
      * 账号手机号
      */
-    @Schema(description = "")
+    @Schema(description = "账号手机号")
     private String phone;
 
     /**
      * 账号邮箱
      */
-    @Schema(description = "")
+    @Schema(description = "账号邮箱")
     private String email;
 
     /**
      * 账号手机号是否有效
      */
-    @Schema(description = "")
+    @Schema(description = "账号手机号是否有效")
     private Boolean validPhone;
 
     /**
      * 账号有效是否有效
      */
-    @Schema(description = "")
+    @Schema(description = "账号有效是否有效")
     private Boolean validEmail;
 
     /**
@@ -62,15 +68,9 @@ public class AccountDTO extends DTO {
     private Boolean expired;
 
     /**
-     * 是否锁定
+     * 状态
      */
-    @Schema(description = "")
-    private Boolean locked;
-
-    /**
-     * 权限集合
-     */
-    @Schema(description = "")
-    private Set<String> grantedAuthority;
+    @Schema(description = "状态")
+    private AccountStatusEnum status;
 
 }

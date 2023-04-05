@@ -44,11 +44,18 @@ public class RoleCmd extends Command {
     private String name;
 
     /**
-     * 角色英文名称
+     * 角色授权码
      */
-    @NotBlank(message = "角色英文名称不能为空")
-    @Schema(description = "英文名称")
-    private String enname;
+    @NotBlank(message = "角色授权码不能为空")
+    @Schema(description = "角色授权码")
+    private String access;
+
+    /**
+     * 角色所属系统
+     */
+    @NotBlank(message = "角色所属系统不能为空")
+    @Schema(description = "角色所属系统")
+    private Integer ownerId;
 
 
     /**

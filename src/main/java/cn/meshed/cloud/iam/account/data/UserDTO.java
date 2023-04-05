@@ -8,15 +8,15 @@ import lombok.EqualsAndHashCode;
 import java.util.Set;
 
 /**
- * <h1>登入成功信息模型</h1>
+ * <h1>当前用户信息模型</h1>
  *
  * @author Vincent Vic
  * @version 1.0
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@Schema(description = "登入成功信息模型")
-public class LoginSuccessDTO extends Command {
+@Schema(description = "当前用户信息模型")
+public class UserDTO extends Command {
     /**
      * 编码
      */
@@ -26,7 +26,7 @@ public class LoginSuccessDTO extends Command {
      * 账号名称
      */
     @Schema(description = "账号名称")
-    private String realName;
+    private String name;
     /**
      * 登入账号
      */

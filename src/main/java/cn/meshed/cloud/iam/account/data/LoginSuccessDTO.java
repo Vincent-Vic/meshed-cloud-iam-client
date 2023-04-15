@@ -23,9 +23,9 @@ public class LoginSuccessDTO extends Command {
     @Schema(description = "编码")
     private Long id;
     /**
-     * 账号名称
+     * 用户名称
      */
-    @Schema(description = "账号名称")
+    @Schema(description = "用户名称")
     private String realName;
     /**
      * 登入账号
@@ -67,5 +67,10 @@ public class LoginSuccessDTO extends Command {
      */
     @Schema(description = "授权列表")
     private Set<String> grantedAuthority;
+    /**
+     * 授权角色
+     */
+    @Schema(description = "授权角色")
+    private Set<String> grantedRole;
 
 }

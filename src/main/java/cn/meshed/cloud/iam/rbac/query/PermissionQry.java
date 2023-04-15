@@ -1,6 +1,7 @@
 package cn.meshed.cloud.iam.rbac.query;
 
 import cn.meshed.cloud.constant.Status;
+import cn.meshed.cloud.iam.rbac.enums.AccessModeEnum;
 import com.alibaba.cola.dto.PageQuery;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
@@ -40,5 +41,11 @@ public class PermissionQry extends PageQuery {
      */
     @Schema(description = "状态")
     private Status status;
+
+    /**
+     * 授权模式列表
+     */
+    @Schema(description = "授权模式")
+    private List<AccessModeEnum> accessModes;
 
 }

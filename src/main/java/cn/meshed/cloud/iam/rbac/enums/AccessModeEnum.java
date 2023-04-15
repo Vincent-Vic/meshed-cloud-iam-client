@@ -1,5 +1,6 @@
 package cn.meshed.cloud.iam.rbac.enums;
 
+import com.baomidou.mybatisplus.annotation.EnumValue;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -30,6 +31,7 @@ public enum AccessModeEnum {
 
     ;
 
+    @EnumValue
     private final int value;
-    private final String key;
+    private final String ext;
 }

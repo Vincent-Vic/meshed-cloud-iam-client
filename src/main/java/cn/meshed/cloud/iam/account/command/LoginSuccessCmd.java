@@ -67,5 +67,10 @@ public class LoginSuccessCmd extends Command {
      */
     @Schema(description = "授权权限")
     private Set<String> grantedAuthority;
+    /**
+     * 授权角色
+     */
+    @Schema(description = "授权角色")
+    private Set<String> grantedRole;
 
 }

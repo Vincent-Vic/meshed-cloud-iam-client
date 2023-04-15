@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.Set;
 
 /**
@@ -23,7 +24,7 @@ public class AccountGrantRoleCmd extends Command {
      *账号ID
      */
     @Schema(description = "账号ID")
-    @NotEmpty(message = "账号ID不能为空")
+    @NotNull(message = "账号ID不能为空")
     private Long accountId;
     /**
      *角色列表

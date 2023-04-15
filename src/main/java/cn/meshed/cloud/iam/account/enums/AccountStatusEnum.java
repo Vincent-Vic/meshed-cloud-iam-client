@@ -1,5 +1,6 @@
 package cn.meshed.cloud.iam.account.enums;
 
+import com.baomidou.mybatisplus.annotation.EnumValue;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -29,6 +30,7 @@ public enum AccountStatusEnum {
     LOCK(3, "lock"),
     ;
 
+    @EnumValue
     private final int value;
-    private final String key;
+    private final String ext;
 }

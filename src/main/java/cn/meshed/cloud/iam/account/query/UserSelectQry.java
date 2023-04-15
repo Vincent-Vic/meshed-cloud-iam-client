@@ -15,7 +15,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Schema(description = "系统选项查询")
-public class SystemSelectQry extends Query {
+public class UserSelectQry extends Query {
 
     /**
      * 类型

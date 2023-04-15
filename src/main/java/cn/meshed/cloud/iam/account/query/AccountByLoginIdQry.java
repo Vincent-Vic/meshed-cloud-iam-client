@@ -8,14 +8,14 @@ import lombok.EqualsAndHashCode;
 import javax.validation.constraints.NotBlank;
 
 /**
- * <h1></h1>
+ * <h1>登入名称查询</h1>
  *
  * @author Vincent Vic
  * @version 1.0
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@Schema(description = "")
+@Schema(description = "登入名称查询")
 public class AccountByLoginIdQry extends Query {
 
     @Schema(description = "登入ID")

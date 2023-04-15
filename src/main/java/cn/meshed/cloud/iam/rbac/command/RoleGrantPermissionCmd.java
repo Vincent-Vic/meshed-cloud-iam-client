@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Set;
 
 /**
@@ -22,7 +23,7 @@ public class RoleGrantPermissionCmd extends Command {
     /**
      * 角色编码
      */
-    @NotBlank(message = "角色编码不能为空")
+    @NotNull(message = "角色编码不能为空")
     @Schema(description = "角色编码")
     private Long roleId;
     /**

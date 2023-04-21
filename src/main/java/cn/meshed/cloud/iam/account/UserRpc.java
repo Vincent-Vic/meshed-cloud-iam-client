@@ -1,11 +1,16 @@
 package cn.meshed.cloud.iam.account;
 
+import cn.meshed.cloud.iam.account.data.AccountDTO;
 import cn.meshed.cloud.iam.account.data.UserDTO;
+import cn.meshed.cloud.iam.account.query.AccountPageQry;
 import cn.meshed.cloud.iam.account.query.GrantedAuthorityQry;
 import cn.meshed.cloud.iam.account.query.UserByOneQry;
 import cn.meshed.cloud.iam.account.query.UserQry;
 import com.alibaba.cola.dto.MultiResponse;
+import com.alibaba.cola.dto.PageResponse;
 import com.alibaba.cola.dto.SingleResponse;
+import io.swagger.v3.oas.annotations.Operation;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.io.Serializable;
 
@@ -53,5 +58,15 @@ public interface UserRpc extends Serializable {
      */
     MultiResponse<UserDTO> getUserList(UserQry userQry);
 
+
+    /**
+     * 分页列表
+     *
+     * @param pageQry 分页参数
+     * @return {@link PageResponse < AccountDTO >}
+     */
+    @Operation(summary = "分页列表")
+    @GetMapping("list")
+    PageResponse<AccountDTO> list(AccountPageQry pageQry);
 
 }

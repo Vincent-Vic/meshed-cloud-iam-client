@@ -21,7 +21,10 @@
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <cola-component-dto.version>4.3.1</cola-component-dto.version>
         <validation-api.version>2.0.1.Final</validation-api.version>
-        <meshed-cloud-constant-starter.version>1.0.0-SNAPSHOT</meshed-cloud-constant-starter.version>
+        <swagger-annotations.version>2.2.2</swagger-annotations.version>
+        <servlet-api.version>2.5</servlet-api.version>
+        <mybatis-plus-annotation.version>3.4.3.4</mybatis-plus-annotation.version>
+        <meshed-cloud-constant.version>1.0.0-SNAPSHOT</meshed-cloud-constant.version>
     </properties>
 
     <dependencies>
@@ -41,7 +44,7 @@
         <dependency>
             <groupId>cn.meshed.cloud</groupId>
             <artifactId>meshed-cloud-constant</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${meshed-cloud-constant.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -50,18 +53,18 @@
         <dependency>
             <groupId>io.swagger.core.v3</groupId>
             <artifactId>swagger-annotations</artifactId>
-            <version>2.2.2</version>
+            <version>${swagger-annotations.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
+            <version>${servlet-api.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-annotation</artifactId>
-            <version>3.4.3.4</version>
+            <version>${mybatis-plus-annotation.version}</version>
         </dependency>
 
     </dependencies>

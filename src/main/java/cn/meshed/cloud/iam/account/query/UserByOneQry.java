@@ -1,11 +1,9 @@
 package cn.meshed.cloud.iam.account.query;
 
+import com.alibaba.cola.dto.Query;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
-import javax.management.Query;
-import java.util.Set;
 
 /**
  * <h1>用户查询</h1>

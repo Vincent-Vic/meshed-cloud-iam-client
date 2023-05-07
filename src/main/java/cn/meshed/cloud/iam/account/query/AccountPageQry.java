@@ -1,6 +1,7 @@
 package cn.meshed.cloud.iam.account.query;
 
 import cn.meshed.cloud.constant.Status;
+import cn.meshed.cloud.iam.account.enums.AccountStatusEnum;
 import com.alibaba.cola.dto.PageQuery;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
@@ -39,5 +40,5 @@ public class AccountPageQry extends PageQuery {
      * 状态
      */
     @Schema(description = "状态")
-    private Status status;
+    private AccountStatusEnum status;
 }

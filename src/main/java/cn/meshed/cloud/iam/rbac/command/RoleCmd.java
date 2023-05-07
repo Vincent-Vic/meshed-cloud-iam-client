@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 /**
  * <p>
@@ -32,7 +33,7 @@ public class RoleCmd extends Command {
     /**
      * 父角色
      */
-    @NotBlank(message = "父角色不能为空")
+    @NotNull(message = "父角色不能为空")
     @Schema(description = "父角色")
     private Long parentId;
 
@@ -53,7 +54,7 @@ public class RoleCmd extends Command {
     /**
      * 角色所属系统
      */
-    @NotBlank(message = "角色所属系统不能为空")
+    @NotNull(message = "角色所属系统不能为空")
     @Schema(description = "角色所属系统")
     private Integer ownerId;
 

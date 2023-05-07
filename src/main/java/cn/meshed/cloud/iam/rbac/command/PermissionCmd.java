@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 /**
  * <p>
@@ -32,7 +33,7 @@ public class PermissionCmd extends Command {
     /**
      * 父权限
      */
-    @NotBlank(message = "父权限不能为空")
+    @NotNull(message = "父权限不能为空")
     @Schema(description = "父权限")
     private Long parentId;
 
@@ -46,7 +47,7 @@ public class PermissionCmd extends Command {
     /**
      * 权限所属系统
      */
-    @NotBlank(message = "权限所属系统不能为空")
+    @NotNull(message = "权限所属系统不能为空")
     @Schema(description = "权限所属系统")
     private Integer ownerId;
 
@@ -65,7 +66,7 @@ public class PermissionCmd extends Command {
     /**
      * 授权模式
      */
-    @NotBlank(message = "授权模式不能为空")
+    @NotNull(message = "授权模式不能为空")
     @Schema(description = "授权模式")
     private AccessModeEnum accessMode;
 

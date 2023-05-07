@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 /**
  * <h1>账号锁定</h1>
@@ -22,7 +23,7 @@ public class AccountLockCmd extends Command {
      * 登入ID
      */
     @Schema(description = "登入ID")
-    @NotBlank(message = "登入ID不能为空")
+    @NotNull(message = "登入ID不能为空")
     private Long id;
 
     /**
